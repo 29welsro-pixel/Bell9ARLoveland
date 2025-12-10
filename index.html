@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <title>Sliding Cube</title>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Set the background -->
+            <a-sky color="lightblue"></a-sky>   
+         
+         
+            <!-- Set the floor -->
+            <a-plane position="0 0 0" height="100" 
+                    width="100" rotation="-90 0 0"
+                    color="black">
+            </a-plane>
+            
+          
+            <a-text value="Welcome to the Expo!" position="-1 1.5 -2" color="blue"
+            ></a-text>
+
+            <a-sphere position="0 20 -30" color="yellow"
+                    height="10" width="10" depth="10"
+                    animation="
+                    property: position;
+                    from: 0 10 -10;
+                    to: 0 -4 -10;
+                    dur: 1000;
+                    loop: true;
+                    "
+            > </a-sphere>
+        </a-scene>
+    </body>
+</html>
